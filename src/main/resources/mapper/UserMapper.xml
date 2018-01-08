@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.zju.dao.UserDAO">
+    <resultMap id="UserResult" type="cn.edu.zju.entity.User">
+        <result property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_blogger (username, password)
+        VALUES (#{username},#{password});
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM t_blogger WHERE id = #{id};
+    </delete>
+
+    <update id="modify">
+        UPDATE t_blogger
+        SET username = #{username}, password = #{password}
+        WHERE id = #{id};
+    </update>
+
+    <select id="findUserByName" resultMap="UserResult">
+        SELECT * FROM t_blogger WHERE username = #{username};
+    </select>
+
+</mapper>

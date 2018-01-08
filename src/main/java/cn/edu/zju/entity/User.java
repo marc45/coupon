@@ -8,24 +8,16 @@ import java.util.Map;
  */
 public class User {
 
-    Map<String, String> maps = new HashMap<String, String>();
+    private Integer id;
+    private String username;//用户名
+    private String password;//密码
 
-
-    private String username;
-    private String password;
-
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-        maps.put("111", "222");
+    public Integer getId() {
+        return id;
     }
 
-    public Map<String, String> getMaps() {
-        return maps;
-    }
-
-    public void setMaps(Map<String, String> maps) {
-        this.maps = maps;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUsername() {
