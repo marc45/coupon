@@ -35,6 +35,8 @@
 
     <!-- 注册swagger配置类 -->
     <bean class="cn.edu.zju.swagger.MySwaggerConfig"/>
+
+
     <!-- 自动扫描 -->
     <context:component-scan base-package="cn.edu.zju.service"/>
 
