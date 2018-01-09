@@ -10,7 +10,7 @@
     <!-- 加载 配置数据库相关参数 的配置文件 -->
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:db.properties" />
+        <property name="location" value="classpath:db.properties"/>
     </bean>
     <!-- 配置数据源 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
@@ -33,8 +33,9 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
+    <!-- 注册swagger配置类 -->
+    <bean class="cn.edu.zju.swagger.MySwaggerConfig"/>
     <!-- 自动扫描 -->
     <context:component-scan base-package="cn.edu.zju.service"/>
-
 
 </beans>
