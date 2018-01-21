@@ -5,3 +5,4 @@
 > spring-mvc.xml(springmvc 配置文件)  
 
   
+**启动Tomcat之后，访问http://localhost:8080/coupon/swagger-ui.html 就可以看到swagger页面。**

@@ -13,6 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Created by succe on 2018/1/9.
+ * swagger框架的配置文件
  */
 @Configuration
 @EnableSwagger2
@@ -22,19 +23,17 @@ public class MySwaggerConfig {
 
     @Bean
     public Docket customDocket() {
-        //
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo());
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
     }
 
-     private ApiInfo apiInfo() {
-         return new ApiInfoBuilder()
-                 .title("API Test  ")
-                 .description("MyAPITest Description")
-                 .contact(new Contact("haoyifen", "http://blog.csdn.net/haoyifen", "haoyifen@yy.com"))
-                 .license("Apache 2.0")
-                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
-                 .version("1.0.0")
-                 .build();
-     }
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("API Test  ")
+                .description("MyAPITest Description")
+                .contact(new Contact("haoyifen", "http://blog.csdn.net/haoyifen", "haoyifen@yy.com"))
+                .license("Apache 2.0")
+                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
+                .version("1.0.0")
+                .build();
+    }
 }

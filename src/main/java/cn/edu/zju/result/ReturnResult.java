@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by succe on 2018/1/9.
+ * swagger框架使用中返回的对象，可以被转换为JSON数据
  */
 public class ReturnResult implements Serializable {
 
