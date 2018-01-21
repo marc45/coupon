@@ -30,7 +30,7 @@ public class MySwaggerConfig {
         return new ApiInfoBuilder()
                 .title("API Test  ")
                 .description("MyAPITest Description")
-                .contact(new Contact("haoyifen", "http://blog.csdn.net/haoyifen", "haoyifen@yy.com"))
+                .contact(new Contact("successli", "https://github.com/successli", "successli@outlook.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.0.0")
